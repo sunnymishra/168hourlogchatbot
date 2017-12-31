@@ -1,0 +1,80 @@
+
+Original blog for inspiration -> http://www.girliemac.com/blog/2017/01/06/facebook-apiai-bot-nodejs/
+Postback and Heroku -> https://x-team.com/blog/how-to-get-started-with-facebook-messenger-bots/
+
+API.ai create intents and custom code -> https://medium.com/towards-data-science/how-to-build-an-faq-chatbot-with-api-ai-using-node-js-a802aff53e6a
+
+Intent and Context -> https://www.sitepoint.com/customizing-your-api-ai-assistant-with-intent-and-context/
+
+Future scope:
+Entities can contain other entities (both system entities and your own developer entities), 
+You can set up intents that require certain information and prompt the user if they don’t provide it, 
+You can use your previously mentioned entities in a conversation using their $alias 
+
+GIT: https://git.heroku.com/bot-168hourlog.git
+URL: https://bot-168hourlog.herokuapp.com
+
+> heroku login
+> heroku create bot-168hourlog
+> heroku git:remote -a bot-168hourlog	(add a remote to your local repository)
+> git push heroku master
+
+> git add .			(How to locally commit a file)
+> git commit -m "fix for bug 12345"
+
+> heroku ps:scale web=1	(Command to scale no. of DYNOS)
+> heroku logs --tail
+> heroku local web	(Start Node in local machine)
+> heroku run bash	(ssh into terminal like ubuntu)
+> heroku config:set FB_TOKEN=ab2123cnbb1 (To set env config variables. This restarts Node instance)
+> heroku config 	(view all env configs)
+> heroku addons:create mongolab:sandbox
+> heroku addons:create papertrail
+> heroku addons:open papertrail
+----------------------------------------------------------
+To-Do:
+1. Allow logging Comma separated works also
+1.1 Ask user if hashtag is correct, show him available 10 hashtags, show him how to create new hashtags
+1.2 Ask user if he wants to add any more work for a given hour. Carry one common context to these new intents
+1.2 log.work.invitation should be triggered using event rather than dummy user query
+1.3 if user declines invitation by saying he is busy or not right now, ask him when should you ping him back
+2. @work Intent should only kick in on Context basis, when bot asks every hour
+3. Save entire chat segregated by per day basis in DB for study purpose
+4. Return Day summary and week summary
+4.1 Return summary at EOD and also onDemand
+4.2 Summary can be modified by user by user input of say 8am cooking, comma separated. Add is allowed, Delete and Modify not allowed
+5. Bot should ask user his preferred time of sleep and time of waking and should not bother user in that time
+5.1 Bot should have custom user msg to indicate do not disturb me till 3pm or do not disturb from 3 to 6pm
+
+
+chutzpah_invitation_jimmyhenrix
+
+chutzpah_invitation_jimmyhenrix_followup
+
+--------------------------------------
+
+https://api.ai/docs/examples/slot-filling
+https://www.sitepoint.com/customizing-your-api-ai-assistant-with-intent-and-context/
+https://www.youtube.com/watch?v=zZCP14gr8Rs
+https://api.ai/docs/examples/contexts
+https://discuss.api.ai/t/steps-to-trigger-event-context-through-query-api-call/11752/2
+https://discuss.api.ai/t/intent-to-trigger-another-intent-help/9374
+
+NodeJs cluster:
+https://www.sitepoint.com/how-to-create-a-node-js-cluster-for-speeding-up-your-apps/
+https://nodejs.org/api/cluster.html
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
