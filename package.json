@@ -1,0 +1,31 @@
+{
+  "name": "168hourlog",
+  "version": "1.0.0",
+  "description": "Chatbot with AI for Time Logging",
+  "main": "index.js",
+  "engines": {
+    "node": "6.8.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "keywords": [
+    "bot",
+    "ai",
+    "chat",
+    "facebook",
+    "messenger"
+  ],
+  "dependencies": {
+    "apiai": "^3.0.3",
+    "body-parser": "^1.15.2",
+    "dotenv": "^4.0.0",
+    "express": "^4.14.0",
+    "node-schedule": "^1.2.5",
+    "request": "^2.79.0",
+    "request-promise": "^4.2.2"
+  }
+}
